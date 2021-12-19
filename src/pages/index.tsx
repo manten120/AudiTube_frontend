@@ -1,9 +1,9 @@
-import { css } from '@emotion/react';
-import { Box, Container, Typography, Button } from '@mui/material';
+import { css } from "@emotion/react";
+import { Box, Container, Typography, Button } from "@mui/material";
 
-import type { NextPage } from 'next';
+import type { NextPage } from "next";
 
-import { Link } from '@/components/Link';
+import { Link } from "@/components/Link";
 
 const yellowButtonCss = css`
   color: green;
