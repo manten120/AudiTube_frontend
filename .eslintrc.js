@@ -11,7 +11,12 @@ module.exports = {
 
     "@typescript-eslint/no-unused-vars": "off", // eslint-plugin-unused-importsを使うために必要な設定 https://www.npmjs.com/package/eslint-plugin-unused-imports
     "unused-imports/no-unused-imports": "error", // eslint-plugin-unused-imports 未使用のimportを禁止する
-    "unused-imports/no-unused-vars": "error", // eslint-plugin-unused-imports 未使用の変数を禁止する
+    "unused-imports/no-unused-vars": "error",
+    "unused-imports/no-unused-vars": [
+      // eslint-plugin-unused-imports 未使用の変数、パラメータを禁止する。ただしアンダースコアで始まるパラメータは許可する
+      "error",
+      { vars: "all", args: "all", argsIgnorePattern: "^_" },
+    ],
 
     "prefer-arrow-functions/prefer-arrow-functions": [
       // 関数をアロー関数に統一する。参考: https://www.npmjs.com/package/eslint-plugin-prefer-arrow-functions

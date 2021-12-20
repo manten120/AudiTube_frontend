@@ -5,7 +5,7 @@ type Data = {
   name: string;
 };
 
-const handle = (req: NextApiRequest, res: NextApiResponse<Data>) => {
+const handle = (_req: NextApiRequest, res: NextApiResponse<Data>) => {
   res.status(200).json({ name: "John Doe" });
 };
 
